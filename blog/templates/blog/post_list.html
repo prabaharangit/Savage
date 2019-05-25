@@ -6,6 +6,25 @@
         <div>
             <h1><a href="/">Savage Blog</a></h1>
         </div>
+       
+        <div>
+             <p>published: 25.05.2019, 06:56</p>
+            {% for post in posts %}
+                {{ post }}
+            {% endfor %}
+        </div>   
+
+
+
+        {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+
+
 
         <div>
             <p>published: 25.05.2019, 06:30</p>
